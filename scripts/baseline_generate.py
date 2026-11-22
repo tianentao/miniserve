@@ -37,9 +37,11 @@ def main() -> None:
     prompt_ids = tokenizer.encode(args.prompt)
     max_context_len = model.config.n_positions
 
-    # Warmup: the first GPU call pays one-time setup costs (e.g. compiling
-    # kernels), which would otherwise inflate step 1 of the measured run.
-    naive_greedy_generate(model, prompt_ids, 1, None, max_context_len)
+    # Warmup: MPS pays a one-time setup cost for EVERY new input shape, and the
+    # naive loop sees a new sequence length each step. Measured in M0: a cold
+    # MPS run is ~2x slower than a warm one. So warm up over the exact same
+    # shapes we are about to measure (EOS ignored so all lengths are covered).
+    naive_greedy_generate(model, prompt_ids, args.max_new_tokens, None, max_context_len)
 
     result = naive_greedy_generate(
         model,
