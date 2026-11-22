@@ -1,7 +1,7 @@
 [project]
 name = "miniserve"
 version = "0.1.0"
-description = "Add your description here"
+description = "A lightweight LLM inference serving engine built from scratch (vLLM-inspired)"
 readme = "README.md"
 authors = [
     { name = "Tianen Tao", email = "tianentao6@gmail.com" }
@@ -22,3 +22,6 @@ dev = [
     "pytest>=9.2.0",
     "ruff>=0.17.6",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
