@@ -1,0 +1,132 @@
+{
+  "environment": {
+    "timestamp": "2026-11-22T00:11:34",
+    "git_commit": "b6e0ff1",
+    "chip": "Apple M4",
+    "os": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.12.15",
+    "torch": "2.15.0",
+    "transformers": "5.23.0",
+    "cpu_threads": 4,
+    "dtype": "float32"
+  },
+  "args": {
+    "devices": [
+      "cpu",
+      "mps"
+    ],
+    "prompt_lens": [
+      8,
+      128,
+      512
+    ],
+    "new_tokens": 64,
+    "warmup": 2,
+    "trials": 5,
+    "model": "openai-community/gpt2"
+  },
+  "results": [
+    {
+      "device": "cpu",
+      "prompt_len": 8,
+      "new_tokens": 64,
+      "tok_per_s_median": 44.8365829795355,
+      "tok_per_s_min": 44.2907036355385,
+      "tok_per_s_max": 44.90764023630988,
+      "first_step_ms_median": 12.779916054569185,
+      "last_step_ms_median": 31.049958080984652,
+      "tok_per_s_all": [
+        44.50722217468363,
+        44.8365829795355,
+        44.861349996867034,
+        44.90764023630988,
+        44.2907036355385
+      ]
+    },
+    {
+      "device": "cpu",
+      "prompt_len": 128,
+      "new_tokens": 64,
+      "tok_per_s_median": 20.09274212016189,
+      "tok_per_s_min": 19.907910091324243,
+      "tok_per_s_max": 20.305987942997444,
+      "first_step_ms_median": 40.880291955545545,
+      "last_step_ms_median": 54.94554108008742,
+      "tok_per_s_all": [
+        20.135972106451877,
+        20.305987942997444,
+        20.09274212016189,
+        19.907910091324243,
+        20.02494463463146
+      ]
+    },
+    {
+      "device": "cpu",
+      "prompt_len": 512,
+      "new_tokens": 64,
+      "tok_per_s_median": 7.286778848621835,
+      "tok_per_s_min": 7.263772469390048,
+      "tok_per_s_max": 7.3211534493671735,
+      "first_step_ms_median": 126.4183750608936,
+      "last_step_ms_median": 142.62879092711955,
+      "tok_per_s_all": [
+        7.3211534493671735,
+        7.280864503059635,
+        7.314650576262637,
+        7.263772469390048,
+        7.286778848621835
+      ]
+    },
+    {
+      "device": "mps",
+      "prompt_len": 8,
+      "new_tokens": 64,
+      "tok_per_s_median": 81.48666053113509,
+      "tok_per_s_min": 81.22997855416344,
+      "tok_per_s_max": 81.733291050603,
+      "first_step_ms_median": 8.101542014628649,
+      "last_step_ms_median": 15.6023750314489,
+      "tok_per_s_all": [
+        81.22997855416344,
+        81.45129624458652,
+        81.48666053113509,
+        81.733291050603,
+        81.71024701240049
+      ]
+    },
+    {
+      "device": "mps",
+      "prompt_len": 128,
+      "new_tokens": 64,
+      "tok_per_s_median": 38.48224616311016,
+      "tok_per_s_min": 38.01192586320722,
+      "tok_per_s_max": 38.6014135491546,
+      "first_step_ms_median": 21.376000018790364,
+      "last_step_ms_median": 29.422332998365164,
+      "tok_per_s_all": [
+        38.01192586320722,
+        38.6014135491546,
+        38.48540595964963,
+        38.365061820883945,
+        38.48224616311016
+      ]
+    },
+    {
+      "device": "mps",
+      "prompt_len": 512,
+      "new_tokens": 64,
+      "tok_per_s_median": 12.806449644610923,
+      "tok_per_s_min": 12.780534829724642,
+      "tok_per_s_max": 12.836908350808471,
+      "first_step_ms_median": 71.4531249832362,
+      "last_step_ms_median": 80.96062496770173,
+      "tok_per_s_all": [
+        12.780534829724642,
+        12.836908350808471,
+        12.78930483723051,
+        12.806449644610923,
+        12.83288725791429
+      ]
+    }
+  ]
+}
