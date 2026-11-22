@@ -74,7 +74,7 @@ uv run python benchmarks/bench_baseline.py
 
 Naive greedy generation (no KV cache), GPT-2 124M, float32, 64 new tokens, EOS ignored.
 2 warmup + 5 trials per config, median reported.
-Apple M4, 16 GB, torch 2.15.0, 4 CPU threads, commit `b6e0ff1`.
+Apple M4, 16 GB, torch 2.15.0, 4 CPU threads, commit `b81203a`.
 Raw data: [`benchmarks/results/baseline_20261122_001405.json`](benchmarks/results/baseline_20261122_001405.json).
 
 | Device | Prompt len | tok/s (median) | min – max | First step | Last step |
